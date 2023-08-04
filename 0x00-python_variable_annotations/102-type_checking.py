@@ -17,23 +17,25 @@ def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple[Any, ...]:
     times.
 
     Parameters:
-        lst (Tuple[int]): The input tuple containing elements to be zoomed in.
+        lst (Tuple[Any, ...]): The input tuple containing elements to be zoomed
+        in.
         factor (int, optional): The factor by which each element should be
         repeated. Defaults to 2.
 
     Returns:
-        List[int]: A new list containing elements from 'lst' repeated 'factor'
+        Tuple[Any, ...]: A new tuple containing elements from 'lst' repeated
+        'factor'
         times.
 
     Example:
         >>> array = (12, 72, 91)
         >>> zoom_2x = zoom_array(array)
         >>> print(zoom_2x)
-        [12, 12, 72, 72, 91, 91]
+        (12, 12, 72, 72, 91, 91)
 
         >>> zoom_3x = zoom_array(array, 3)
         >>> print(zoom_3x)
-        [12, 12, 12, 72, 72, 72, 91, 91, 91]
+        (12, 12, 12, 72, 72, 72, 91, 91, 91)
     """
     zoomed_in = [
         item for item in lst
