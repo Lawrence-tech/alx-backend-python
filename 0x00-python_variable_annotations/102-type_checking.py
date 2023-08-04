@@ -4,10 +4,10 @@
 Type checking
 """
 
-from typing import Tuple, List
+from typing import Tuple, Any
 
 
-def zoom_array(lst: Tuple[int], factor: int = 2) -> List[int]:
+def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> Tuple[Any, ...]:
     """
     Zooms in on the elements of a given list by repeating each element multiple
     times.
@@ -35,11 +35,11 @@ def zoom_array(lst: Tuple[int], factor: int = 2) -> List[int]:
         >>> print(zoom_3x)
         [12, 12, 12, 72, 72, 72, 91, 91, 91]
     """
-    zoomed_in: List[int] = [
+    zoomed_in = [
         item for item in lst
         for i in range(factor)
     ]
-    return zoomed_in
+    return tuple(zoomed_in)
 
 
 # Example usage:
