@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+Async_generator that takes no arguments
+"""
 import asyncio
 import random
 
