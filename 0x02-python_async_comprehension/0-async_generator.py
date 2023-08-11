@@ -4,6 +4,7 @@ Async_generator that takes no arguments
 """
 import asyncio
 import random
+from typing import AsyncGenerator
 
 
 async def async_generator():
